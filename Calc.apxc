@@ -1,0 +1,25 @@
+public class Calc {
+    public Double val1 {get; set;}
+    public Double val2 {get;set;}
+    public Double result {get;set;}
+    public String op {get;set;}
+    
+    public Calc(){}
+    
+    public void find() {
+        if (op == 'add') {
+            result = val1 + val2;
+        }
+        else if(op == 'sub') {
+            result = val1 - val2;
+        }
+        else if(op == 'div'){
+        	result = val1 / val2;
+        }
+        else {
+            Integer temp = math.mod(Integer.valueOf(val1), Integer.valueOf(val2));
+            result = Double.valueOf(temp);
+        }
+    }
+    
+}
